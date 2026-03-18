@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        //Fragmento default ...
+
         verFragmentoPerfil()
 
         binding.bottomV.setOnItemSelectedListener { item ->
