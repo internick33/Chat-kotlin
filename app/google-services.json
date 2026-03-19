@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "387146470430",
+    "project_id": "chat-kotlin-be6ab",
+    "storage_bucket": "chat-kotlin-be6ab.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:387146470430:android:0df65e6a1c23124371ca0f",
+        "android_client_info": {
+          "package_name": "com.fenix.chat_kotlin"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBmNiNNDS9FZZzgzDeHUP693sdZIACqvGA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

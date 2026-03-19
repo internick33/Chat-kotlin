@@ -1,5 +1,6 @@
 package com.fenix.chat_kotlin
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -9,16 +10,23 @@ import com.fenix.chat_kotlin.Fragments.FragmentChats
 import com.fenix.chat_kotlin.Fragments.FragmentPerfil
 import com.fenix.chat_kotlin.Fragments.FragmentUsuarios
 import com.fenix.chat_kotlin.databinding.ActivityMainBinding
+import com.google.firebase.auth.FirebaseAuth
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
+    private lateinit var firebaseAuth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        firebaseAuth = FirebaseAuth.getInstance()
+
+        if(firebaseAuth.currentUser == null ){
+            irOpcionesLogin()
+        }
 
         verFragmentoPerfil()
 
@@ -41,6 +49,10 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
+    }
+
+    private fun irOpcionesLogin() {
+        startActivity(Intent(applicationContext, OpcionesLoginActivity::class.java))
     }
 
     private fun verFragmentoPerfil(){
